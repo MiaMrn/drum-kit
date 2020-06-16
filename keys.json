@@ -1,0 +1,47 @@
+{
+    "keyA": {
+        "title": "A",
+        "name": "clap",
+        "sound": "sounds/clap.wav"
+    },
+    "keyS": {
+        "title": "S",
+        "name": "hihat",
+        "sound": "sounds/hihat.wav"
+    },
+    "keyD": {
+        "title": "D",
+        "name": "kick",
+        "sound": "sounds/kick.wav"
+    },
+    "keyF": {
+        "title": "F",
+        "name": "openhat",
+        "sound": "sounds/openhat.wav"
+    },
+    "keyG": {
+        "title": "G",
+        "name": "boom",
+        "sound": "sounds/boom.wav"
+    },
+    "keyH": {
+        "title": "H",
+        "name": "ride",
+        "sound": "sounds/ride.wav"
+    },
+    "keyJ": {
+        "title": "J",
+        "name": "snare",
+        "sound": "sounds/snare.wav"
+    },
+    "keyK": {
+        "title": "K",
+        "name": "tom",
+        "sound": "sounds/tom.wav"
+    },
+    "keyL": {
+        "title": "L",
+        "name": "tink",
+        "sound": "sounds/tink.wav"
+    }
+}
