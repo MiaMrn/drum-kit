@@ -1,5 +1,3 @@
-const container = document.querySelector(".container");
-
 fetch("keys.json")
     .then(reponse => {
         return reponse.json();
@@ -27,22 +25,24 @@ fetch("keys.json")
             divElt.appendChild(titleElt);
             divElt.appendChild(nameElt);
             divElt.appendChild(audioElt);
-            container.appendChild(divElt);
+            document.querySelector(".container").appendChild(divElt);
         }
     });
 
-window.addEventListener("keydown", function (e) {
-    const key = e.key.toUpperCase();
-    const divs = document.querySelectorAll(".key");
-    divs.forEach(div => {
-        if (div.dataset.lettre === key) {
-            div.classList.add("pressed");
-            const audio = div.querySelector("audio");
+window.addEventListener("keydown", playSound);
+
+function playSound(e) {
+    const keyCode = e.key.toUpperCase();
+    const keys = document.querySelectorAll(".key");
+    keys.forEach(key => {
+        if (key.dataset.lettre === keyCode) {
+            key.classList.add("pressed");
+            const audio = key.querySelector("audio");
             audio.currentTime = 0;
             audio.play();
         }
+        key.addEventListener("transitionend", function () {
+            this.classList.remove("pressed");
+        });
     })
-    setTimeout(function () {
-        document.querySelector(".pressed").classList.remove("pressed");
-    }, 70);
-})
+}
